@@ -34,6 +34,11 @@ public class OrderClassExample {
 		
 	}
 
+	public void display()
+	{
+	System.out.println(ok);
+	}
+
 	public static int getPrize() {
 		return prize;
 	}
