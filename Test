@@ -1,13 +1,52 @@
-Hello All
-13 Aug
-Git Examples
-Fist Change
-Second Change
-Third Change
+package com.collections;
 
-Master Changed
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
+public class OrderClassExample {
 
+	private static int prize;
+	private int qty;
+	
+	public static void main(String[] args) {
+		
+		OrderClassExample o1 = new OrderClassExample();
+		OrderClassExample o2 = new OrderClassExample();
+		Set<OrderClassExample> set = new HashSet<OrderClassExample>();
+		set.add(o1);
+		set.add(o2);
+		set.add(o1);
+		set.add(o2);
+		System.out.println(set);
+		o1.setQty(1);
+		o2.setQty(2);
+		o1.setPrize(100);
+		System.out.println(set.add(o2));
+	    Iterator<OrderClassExample> it = set.iterator();
+	   while(it.hasNext())
+	   {
+		   OrderClassExample o = it.next();
+		   System.out.println(o.qty);
+		   System.out.println(o.prize);
+		   
+	   }
+		
+	}
 
-Branch Changes
-Branch Change3
+	public static int getPrize() {
+		return prize;
+	}
+
+	public static void setPrize(int prize) {
+		OrderClassExample.prize = prize;
+	}
+
+	public int getQty() {
+		return qty;
+	}
+
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
+}
