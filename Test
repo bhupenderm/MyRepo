@@ -36,7 +36,12 @@ public class OrderClassExample {
 
 	public static int getPrize() {
 		return prize;
+	
 	}
+	public void disp()
+	{
+	}
+	
 
 	public static void setPrize(int prize) {
 	if(o>1)
