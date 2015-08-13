@@ -39,8 +39,12 @@ public class OrderClassExample {
 	}
 
 	public static void setPrize(int prize) {
+	if(o>1)
+	{
 		OrderClassExample.prize = prize;
 	}
+	}
+	
 
 	public int getQty() {
 		return qty;
